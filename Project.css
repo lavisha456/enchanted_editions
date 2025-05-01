@@ -1,0 +1,284 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+    font-family: Garamond, serif;
+    background-color:#f5f5d5;
+    font-size:large;
+    color:white;
+    background-image:url('bookshelf5.jpg');
+    background-repeat:repeat;
+    background-position:center;
+    background-size: contain;
+
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.auto-style3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 15px;
+    background-color: #c7b793;
+}
+
+
+.content {
+    display: flex;
+    /* justify-content: space-evenly; align-items: ; */
+    gap: 20px;
+    align-items: center;  
+}
+
+.img {
+     display: flex;
+   margin-left: auto; 
+}
+
+.profile_picture {
+display: flex;
+align-items: center;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.Text1 {
+    margin: 20px 0;
+    font-family:Garamond,serif;
+}
+
+.side-menu {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 0;
+    background-color: #333;
+    overflow-x: hidden;
+    transition: 0.5s;
+    display: flex;
+    flex-direction: column;
+    padding-top: 60px;
+    color: white;
+    z-index: 1000;
+    background-color:#5c724a;
+}
+
+.side-menu a {
+    padding: 10px 15px;
+    text-decoration: none;
+    color: white;
+    background-color:#5c724a;
+    font-size: 18px;
+    display: block;
+}
+
+.side-menu a:hover {
+    background-color: #5c724a;
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+}
+
+.page-container {
+    flex: 1; 
+    display: flex;
+    flex-direction: column;
+}
+
+.footer {
+    width: 100%;
+    background-color: #354a2f;
+    color: white;
+    text-align: center;
+    padding: 0px;
+    margin-top: auto;
+    width: 100%;
+    position: relative;
+}
+
+input[type=text] {
+    width: 75%;
+    max-width: 800px;
+    height: 37px;
+    padding: 5px;
+    font-size: 16px;
+}
+ 
+ .auto-style1 {
+    text-align: center;
+}
+.auto-style2 {
+    color: black;
+    background-color: #f9f5dc;
+    margin: 20px;
+    height: 180px;
+    width: 200px;
+    font-family: Garamond, serif;
+    border-radius: 10px;
+}
+
+ .top-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#booklist-container {
+    max-height: 200px; /* Adjust height as needed */
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 0 auto;
+    width: 80%;
+    background: white;
+    color: black;
+    border-radius: 5px;
+}
+
+
+#search-bar {
+    position: relative;
+}
+
+#booklist {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.books {
+    margin: 5px 0;
+    padding: 5px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+}
+
+.books:hover {
+    background-color: #f0f0f0;
+}
+
+.type_of_login{
+    position:fixed;
+}
+
+.header_staff_style {
+    font-size: x-large;
+}
+
+.books-container {
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+    gap: 20px; /* Space between boxes */
+    justify-content: center; /* Center the grid items */
+    margin: 0px auto; /* Add margin around the container */
+    padding: 20px;
+    max-width: 1200px; /* Optional: Limit container width */
+}
+
+.book-display {
+    display: flex;
+    flex-wrap: wrap; /* Ensure books wrap to the next line if needed */
+    justify-content: center; /* Center-align the books */
+    padding: 20px;
+    gap: 20xpx; /* Add spacing between books */
+    background-color: transparent; /* Match the body background */
+}
+
+.book-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    width: 500px; 
+    height: 400px;
+    margin: 20px auto;
+    background-color: #f9f5dc; /* Light yellowish background */
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    color: black;
+    font-family: Garamond, serif;
+}
+
+.book-box-content {
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a soft shadow */
+    overflow: hidden; /* Ensures content doesn't overflow */
+    padding: 15px; /* Space inside the box */
+    width: 300px; /* Fixed width */
+    height: 400px; /* Fixed height */
+    text-align: center; /* Center-align content */
+}
+
+.book-cover {
+    width: 150px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+
+.book-details {
+    flex-grow: 1;
+    color: #333;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.borrow-button {
+    padding: 8px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.borrow-button:hover {
+    background-color: #45a049;
+}
+
+.user-info {
+    color: black;
+    background-color: #f9f5dc;
+    margin: 60px;
+    border-radius: 10px;
+    height: 180px;
+    font-family: Garamond, serif;
+}
+
+.staff-info {
+    color: black;
+    background-color: #f9f5dc;
+    margin: 60px;
+    border-radius: 10px;
+    height: 180px;
+    font-family: Garamond, serif;
+}
+

@@ -1,0 +1,97 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyAccount</title>
+    
+    <link type="text/css" rel="stylesheet" href="Project.css">
+</head>
+
+<script>
+    // This function fetches user info and displays it in the HTML
+    window.onload = function() {
+        fetch('/user-info')  // Make a GET request to the /user-info route
+            .then(response => {
+                if (response.ok) {
+                    return response.json();  // Parse the JSON response
+                }
+                throw new Error('Failed to load user info');
+            })
+            .then(data => {
+                // Populate the HTML with the user data
+                document.getElementById('userName').textContent = data.Name;
+                document.getElementById('userEmail').textContent = data.Email;
+                document.getElementById('userDOB').textContent = data.DOB;
+            })
+            .catch(error => {
+                console.error(error);
+                alert('There was an error loading your account information.');
+            });
+    };
+</script>
+
+
+<body>
+
+     <header class="auto-style3">
+        <div class="content">
+            <div>
+                &nbsp;</div>
+        <a href="User_home.html" class="img">
+        <img src="Project_logo.png" width="70px" height="70px" alt="Home button">
+        </a>
+        
+        
+        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        
+        <a href="User_home.html">
+        <p>Home</p>
+        </a>
+        
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        
+        <a href="MyBooks.html">
+        <p>MyBooks</p>
+        </a>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+
+			<a href="User_MyAccount.html">
+			<p>MyAccount</p>
+			</a>
+
+        </div>
+        
+        
+        <a href="User_MyAccount.html"  class="profile_picture"  >
+            <img src="Default_pfp.svg.png" alt="Profile Image" height="50px" width="50px" >
+        </a>
+    
+        
+    </header>
+
+
+    <!-- Account Details Container -->
+    <div class="user-container">
+        <!-- Staff Information Section -->
+        <div class="user-info">
+            <h1>&nbsp;&nbsp;&nbsp;User Information</h1>
+            <p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Name:</strong> <span id="userName"></span></p>
+            <p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Email:</strong> <span id="userEmail"></span></p>
+            <p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Date of Birth:</strong> <span id="userDOB"></span></p>
+            
+        </div>    
+    
+    </div>
+        
+    <div class="footer">
+        <p>Dubai Group 4</p>
+    </div>
+    
+
+    
+    
+
+    </body>
+</html>

@@ -1,0 +1,191 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staff Home</title>
+
+    <link type="text/css" rel="stylesheet" href="Project.css">
+    <style type="text/css">
+
+        .book {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #f9f5dc;
+            font-family: Garamond, serif;
+            color: black;
+        }
+        .book img {
+            width: 100px;
+            height: 150px;
+            margin-right: 15px;
+        }
+        .book button {
+            background-color: #ff4d4d;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .book button:hover {
+            background-color: #ff1a1a;
+        }
+    </style>
+
+<script src="Staff_home.js"></script>
+
+</head>
+<body>
+    <div class="page-container">
+        <header>
+            <div class="auto-style3">
+                <div class="content">
+                    <a href="Staff_home.html" class="img">
+                        <img src="Project_logo.png" width="70px" height="70px" alt="Home button">
+                    </a>
+                    <a href="Staff_home.html"><p>Home</p></a>
+                    <a href="Staff_AddBooks.html"><p>Add Books</p></a>
+                    <a href="Staff_MyAccount.html"><p>MyAccount</p></a>
+                </div>
+                <div class="pfp">
+                    <a href="Staff_MyAccount.html" class="profile_picture">
+                        <img src="Default_pfp.svg.png" alt="Profile Image" height="50px" width="50px">
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <div id="search-bar" style="text-align: center;">
+            <input type="text" name="searchBooks" id="searchBooks" placeholder="What book are you looking for..." onkeyup="searchBooks()" onclick="showBooks()">
+            <p id="noResults" style="display: none;">No books found.</p>
+         </div>
+         
+         <div id="booklist-container" style="display:none;">
+         <ul id="booklist">
+             <li class="books">Twisted Love</li>
+             <li class="books">Twisted Games</li>
+             <li class="books">Twisted Hate</li>
+             <li class="books">Twisted Lies</li>
+             <li class="books">A Thousand Boy Kisses</li>
+             <li class="books">The Heart Principle</li>
+             <li class="books">A Good Girl's Guide to Murder</li>
+             <li class="books">Good Girl, Bad Blood</li>
+             <li class="books">As Good As Dead</li>
+             <li class="books">A Court Of Thorns and Roses</li>
+             <li class="books">A Court Of Mist and Fury</li>
+             <li class="books">A Court Of Wings And Ruin</li>
+             <li class="books">A Court Of Frost And Starlight</li>
+             <li class="books">A Court Of Silver Flames</li>
+             <li class="books">We Were Liars</li>
+             <li class="books">The Love Hypothesis</li>
+             <li class="books">Love, Theoretically</li>
+             <li class="books">It Ends With Us</li>
+             <li class="books">It Starts With Us</li>
+             <li class="books">The Silent Patient</li>
+             <li class="books">The Seven Husbands Of Evelyn Hugo</li>
+             <li class="books">The Twilight Saga: Twilight</li>
+             <li class="books">The Twilight Saga: New Moon</li>
+             <li class="books">The Twilight Saga: Eclipse</li>
+             <li class="books">The Twilight Saga: Breaking Dawn</li>
+             <li class="books">Kings Of Sin: King Of Wrath</li>
+             <li class="books">Kings Of Sin: King Of Pride</li>
+             <li class="books">Kings Of Sin: King Of Greed</li>
+             <li class="books">Kings Of Sin: King Of Sloth</li>
+             <li class="books">Girl In Pieces</li>
+             <li class="books">My Fault</li>
+             <li class="books">Culpa Tuya</li>
+             <li class="books">The Hunger Games</li>
+             <li class="books">The Hunger Games: Catching Fire</li>
+             <li class="books">The Hunger Games: Mocking Jay</li>
+             <li class="books">The Shadow and Bone Trilogy: Shadow and Bone</li>
+             <li class="books">The Shadow and Bone Trilogy: Siege and Storm</li>
+             <li class="books">The Shadow and Bone Trilogy: Ruin and Rising</li>
+             <li class="books">Haunting Adeline</li>
+             <li class="books">Hunting Adeline</li>
+             <li class="books">Shatter Me</li>
+             <li class="books">Destroy Me</li>
+             <li class="books">Unravel Me</li>
+             <li class="books">Fracture Me</li>
+             <li class="books">Ignite Me</li>
+             <li class="books">Restore Me</li>
+             <li class="books">Shadow Me</li>
+             <li class="books">Defy Me</li>
+             <li class="books">Reveal Me</li>
+             <li class="books">Imagine Me</li>
+             <li class="books">Believe Me</li>
+             <li class="books">The Spanish Love Deception</li>
+             <li class="books">One of Us is Lying</li>
+             <li class="books">One of Us is Next</li>
+             <li class="books">One of Us is Back</li>
+             <li class="books">To All The Boys I've Loved Before</li>
+             <li class="books">P.S I Still Love You</li>
+             <li class="books">Always and Forever, Lara Jean</li>
+             <li class="books">The Girl On The Train</li>
+             <li class="books">Into the Water</li>
+             <li class="books">The Perfect Marriage</li>
+             <li class="books">Archer's Voice</li>
+             <li class="books">Murder On The Orient Express</li>
+             <li class="books">The Hating Game</li>
+             <li class="books">The Kane Chronicles - The Red Pyramid</li>
+             <li class="books">Percy Jackson and the Olympians - The Lightning Thief</li>
+             <li class="books">Percy Jackson and the Olympians - The Sea of Monsters</li>
+             <li class="books">Percy Jackson and the Olympians - The Titan's Curse</li>
+             <li class="books">Percy Jackson and the Olympians - The Battle of the Labyrinth</li>
+             <li class="books">Percy Jackson and the Olympians - The Last Olympian</li>
+             <li class="books">Harry Potter: The Complete Collection</li>
+             <li class="books">A Game of Thrones</li>
+             <li class="books">A Game of Thrones - A Clash of Kings</li>
+             <li class="books">A Game of Thrones - A Storm of Swords</li>
+             <li class="books">A Game of Thrones - A Feast For Crows</li>
+             <li class="books">A Game of Thrones - A Dance With Dragons</li>
+             <li class="books">The Heroes of Olympus - The Lost Hero</li>
+             <li class="books">The Heroes of Olympus - The Son Of Neptune</li>
+             <li class="books">The Heroes of Olympus - The Demigod Diaries</li>
+             <li class="books">The Heroes of Olympus - The Mark of Athena</li>
+             <li class="books">The Heroes of Olympus - The House of Hades</li>
+             <li class="books">The Heroes of Olympus - Percy Jackson's Greek Heroes</li>
+             <li class="books">The Heroes of Olympus - The Blood of Olympus</li>
+             <li class="books">The Kane Chronicles - The Throne Of Fire</li>
+             <li class="books">The Kane Chronicles - The Serpent's Shadow</li>
+             <li class="books">All Your Perfects</li>
+             <li class="books">Bones</li>
+             <li class="books">The Roommate</li>
+             <li class="books">The Fault In Our Stars</li>
+             <li class="books">Every Last Word</li>
+             <li class="books">The HouseMaid</li>
+             <li class="books">The Summer I Turned Pretty</li>
+             <li class="books">The Summer I Turned Pretty - It's Not Summer Without You</li>
+             <li class="books">The Summer I Turned Pretty - We'll Always Have Summer</li>
+             <li class="books">Dating Dr Dil</li>
+             <li class="books">The American Roommate Experiment</li>
+             <li class="books">Never Have I Ever</li>
+             <li class="books">Enola Holmes - The Case of the Missing Marquess</li>
+             <li class="books">Enola Holmes - The Case of the Left-Handed Lady</li>
+             <li class="books">Enola Holmes - The Case of the Bizarre Bouquets</li>
+             <li class="books">Enola Holmes - The Case of the Peculiar Pink Fan</li>
+         </ul>
+                 </div>   
+        
+                <div class="book-display"> 
+                    <div id="book-container" class="books-container"></div>
+                </div>
+            </div>
+        
+            <div class="footer">
+                <p>Dubai Group 4</p>
+            </div>
+        
+    <div class="footer">
+        <p>Dubai Group 16</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Signup</title>
+     <link type="text/css" rel="stylesheet" href="/public/stylesheets/signup_and_login.css">
+       
+    <script>
+    	
+        function validatePasswords() {
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+            if (password !== confirmPassword) {
+                alert("Passwords do not match!");
+                return false;
+            }
+            return true;
+        }
+    
+    </script>
+
+   
+  </head>
+
+  <body>
+  
+  
+         <header class="auto-style3">
+        <div class="content">
+         <img src="/public/images/Project_logo.png" width="70px" height="70px" alt="Dashboard button">
+
+        </div>
+     
+    </header>
+    
+    
+    <div class="auto-style1">
+        
+        <form class="form" method="post" action="/auth/register" onsubmit="return validatePasswords()">
+             <h1>User Signup</h1>
+            <br>
+            <label class="label-color">First Name</label>
+            <input type="text" name="firstName" placeholder="First Name" style="height: 20px; width: 30%;" class="signuptextbox">
+          
+            <br> <br>
+            
+            <label class="label-color">Last Name</label>
+            <input type="text" name="lastName" placeholder="Last Name" style="height: 20px; width: 30%;" class="signuptextbox">
+            
+			<br> <br>
+            
+            <label class="label-color">Username</label>
+            <input type="text" id="userID" name="username" placeholder="Username" style="height: 20px; width: 30%;" class="signuptextbox">
+
+			<br><br>
+			
+            <label class="label-color">Password</label>
+            <input type="password" id = "password" name = "password" placeholder="please enter your password" style="height: 20px; width: 30%;" class="auto-style5">
+			
+			
+			<br><br>
+			
+            <label class="label-color">Confirm password</label>
+            <input type="password" id = "confirmPassword" name="confirmPassword" placeholder="please re-enter your password" style="height: 20px; width: 30%;" class="auto-style5">
+			
+            <br>
+            
+            </div>
+            
+            <p class="auto-style1"> By clicking the Submit button, you agree to our Terms and Conditions and Policy</p>
+            <button type="button" onclick="addNewAccount()" >Submit</button>
+            
+            
+        	<p class="auto-style1" style="color:black">Already have an account?
+        <a href="User_Login.html" style="color:black;text-decoration :underline" >Login</a>
+
+        </p>
+           
+        </form>
+        
+        
+        
+        <table>
+        
+        <thead>Heading</thead>
+        	
+        
+        <thead>Value</thead>
+        
+        
+        </table>
+        
+        
+   
+      </div>
+      
+      
+        <div class="footer">
+        <p>Dubai Group 4</p>
+    </div>
+
+
+
+  </body>
+
+
+</html>

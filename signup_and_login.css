@@ -1,0 +1,153 @@
+﻿body {
+            margin: 0;
+            padding: 0;
+            font-family: Garamond, serif;
+            background-color:white;
+            font-size:large;
+            color:white;
+                    }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px 10px;
+        }
+        
+          	.auto-style3 {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 15px 15px;
+		background-color: #c7b793;
+	}
+
+       
+        .content {
+            display: flex;
+            <!-- justify-content: space-evenly; align-items: ;-->
+            gap: 20px;
+            align-items: center;  
+        }
+
+        .img {
+         	display: flex;
+           margin-left: auto; 
+        }
+        
+        .profile_picture {
+    	display: flex;
+    	align-items: center;
+	}
+        
+
+        a {
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .Text1 {
+            margin: 20px 0;
+            font-family:Garamond,serif;
+            
+                    }
+
+        .side-menu {
+            position: fixed;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 0;
+            background-color: #333;
+            overflow-x: hidden;
+            transition: 0.5s;
+            display: flex;
+            flex-direction: column;
+            padding-top: 60px;
+            color: white;
+            z-index: 1000;
+            background-color:#5c724a;
+        }
+
+        .side-menu a {
+            padding: 10px 15px;
+            text-decoration: none;
+            color: white;
+            background-color:#5c724a;
+            font-size: 18px;
+            display: block;
+        }
+        
+        .side-menu a:hover {
+            background-color: #5c724a;
+        }
+        
+        .close-btn {
+            position: absolute;
+            top: 15px;
+            right: 25px;
+            font-size: 30px;
+            cursor: pointer;
+            color: white;
+        }
+
+        .footer {
+        position:absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: #354a2f;
+            color: white;
+            text-align: center;
+            padding: 0px;
+        }
+
+        input[type=text] {
+            width: 75%;
+            max-width: 800px;
+            height: 37px;
+            padding: 5px;
+            font-size: 16px;
+        }
+         
+         .auto-style1 {
+		text-align: center;
+		color:black;
+		}
+		.auto-style2 {
+	text-align: left;
+	}
+
+ 		.top-right {
+            position: absolute;
+            top: 0;
+            right: 0;
+  }
+  
+  signuptextbox{
+  }
+  
+  .label-color{
+  color:black;
+  }
+  
+  	 .form {
+		 margin-left: 32px;
+		 margin-top: 30px;
+	 }
+	 .auto-style5 {
+		 font-size: medium;
+	 }
+
+  	
+	
+  
+  
+   
+  
+  }

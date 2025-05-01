@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staff MyAccount</title>
+    
+    <link type="text/css" rel="stylesheet" href="Project.css">
+	<style type="text/css">
+        .footer {
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+        }
+	</style>
+</head>
+
+<script>
+    $(document).ready(function() {
+    $.get('/user-info', function(data) {  // Make a GET request to the /user-info route
+        // Populate the HTML with the user data
+        $('#staffName').text(data.Name);
+        $('#staffEmail').text(data.Email);
+        $('#staffDOB').text(data.DOB);
+    }).fail(function() {
+        alert('There was an error loading your account information.');
+    });
+});
+</script>
+
+<body>
+
+
+
+    <header>
+        <div class="auto-style3">
+            <div class="content">
+                <a href="Staff_home.html" class="img">
+                    <img src="Project_logo.png" width="70px" height="70px" alt="Home button">
+                </a>
+                <a href="Staff_home.html"><p>Home</p></a>
+                <a href="Staff_AddBooks.html"><p>Add Books</p></a>
+                <a href="Staff_MyAccount.html"><p>MyAccount</p></a>
+            </div>
+            <div class="pfp">
+                <a href="Staff_MyAccount.html" class="profile_picture">
+                    <img src="Default_pfp.svg.png" alt="Profile Image" height="50px" width="50px">
+                </a>
+            </div>
+        </div>
+    </header>
+
+
+
+
+
+
+    <!-- Account Details Container -->
+    <div class="container">
+        <!-- Staff Information Section -->
+        <div class="staff-info">
+            <h2>Staff Information</h2>
+            <p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Name:</strong> Pia Fernando <span id="Name"></span></p>
+            <p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Email:</strong> pf3001@hw.ac.uk  <span id="Email"></span></p>
+            <p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Date of Birth:</strong> 2006-06-05 <span id="Date_Of_Birth"></span></p>
+        </div>
+    
+    
+    <div class="footer">
+        <p>Dubai Group 4</p>
+    </div>
+
+    
+    
+
+    </body>
+</html>
